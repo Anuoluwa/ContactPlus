@@ -3,7 +3,7 @@ import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable }
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/Observable/from';
 import 'rxjs/add/operator/catch';
-import { Company } from '../company';
+import { Company } from './company';
 
 
 @Injectable()

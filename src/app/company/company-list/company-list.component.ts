@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '../company.service';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { Company } from '../../company';
+import { Company } from '../company';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-company-list',
@@ -9,7 +10,7 @@ import { Company } from '../../company';
   styleUrls: ['./company-list.component.css']
 })
 export class CompanyListComponent implements OnInit {
-  companies$: FirebaseListObservable<Company[]>;
+  companies$: FirebaseListObservable<Company[]> | Observable<string>;
 
   constructor(private companyService: CompanyService) { }
 

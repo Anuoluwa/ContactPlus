@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { CompanyService } from '../company.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Company } from '../../company';
+import { Company } from '../company';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
@@ -14,7 +14,7 @@ import 'rxjs/add/observable/of';
 export class CompanyEditComponent implements OnInit {
   companyKey: string;
   isNewCompany: boolean;
-  company$: FirebaseObjectObservable<Company>;
+  company$: FirebaseObjectObservable<Company> | Observable<string>;
 
   constructor(
     private router: Router,
@@ -28,7 +28,7 @@ export class CompanyEditComponent implements OnInit {
     !this.isNewCompany ? this.getCompany() : this.company$ = Observable.of({}) as FirebaseObjectObservable<Company>;
   }
   getCompany() {
-    this.company$ = this.companyService.getCompany(this.companyKey);
+  this.company$ = this.companyService.getCompany(this.companyKey);
   }
   saveCompany(company) {
     const save = this.isNewCompany
