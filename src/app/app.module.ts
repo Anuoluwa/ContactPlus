@@ -25,12 +25,12 @@ import { AuthGuard } from './auth/auth.guard';
 
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAuX6Fo7fEj9hUoLQ7_QYPdRPmSP1wDTE4',
-    authDomain: 'comcontacts-fdd4c.firebaseapp.com',
-    databaseURL: 'https://comcontacts-fdd4c.firebaseio.com',
-    projectId: 'comcontacts-fdd4c',
-    storageBucket: 'comcontacts-fdd4c.appspot.com',
-    messagingSenderId: '501697754734'
+  apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: ''
 };
 
 @NgModule({
